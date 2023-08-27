@@ -1,84 +1,18 @@
-import React, { useEffect } from 'react';
-
+import React from "react";
+import arrow from "../assets/arrow.png";
 const TradingViewWidget = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
-    script.async = true;
-    script.innerHTML = JSON.stringify({
-      "symbols": [
-        {
-          "description": "Btc",
-          "proName": "BINANCE:BTCUSDT"
-        },
-        {
-          "description": "ETH",
-          "proName": "BINANCE:ETHUSD"
-        },
-        {
-          "description": "SOl",
-          "proName": "BINANCE:SOLUSDT"
-        },
-        {
-          "description": "ADA",
-          "proName": "BINANCE:ADAUSDT"
-        },
-        {
-          "description": "Link",
-          "proName": "BINANCE:LINKUSDT"
-        },
-        {
-          "description": "XRP",
-          "proName": "BINANCE:XRPUSD"
-        },
-        {
-          "description": "DXY",
-          "proName": "CAPITALCOM:DXY"
-        },
-        {
-          "description": "GOLD",
-          "proName": "OANDA:XAUUSD"
-        },
-        {
-          "description": "S&P 500",
-          "proName": "SP:SPX"
-        }
-      ],
-      "showSymbolLogo": true,
-      "colorTheme": "dark",
-      "isTransparent": false,
-      "displayMode": "adaptive",
-      "locale": "en"
-    });
-
-    document.getElementById('tradingview-widget-container').appendChild(script);
-
-    return () => {
-      document.getElementById('tradingview-widget-container').removeChild(script);
-    };
-  }, []);
-
   return (
-    <div id="tradingview-widget-container" className="tradingview-widget-container">
-      <div className="tradingview-widget-container__widget"></div>
- 
+    <div className=" flex flex-row justify-center items-center p-2  sm:flex bg-gradient-to-r from-[#00DDC3] from-40% to-purple-500 ...">
+      <p className=" hover:cursor-pointer text-center text-white">
+        Join live Batches
+      </p>
+      <img
+        className=" hover:cursor-pointer ml-2 mt-1 w-5 h-5"
+        src={arrow}
+        alt="a"
+      />
     </div>
   );
 };
 
 export default TradingViewWidget;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from "react";
 
 const YouTubeLastPostedVideo = () => {
   const [videoInfo, setVideoInfo] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
 
   const videoRef = useRef();
-  const CHANNEL_ID = 'UCP-xJnGZMNnjTQfH7lw0oAw'; // Replace with your YouTube channel ID
-  const API_KEY = 'AIzaSyChWcDiJKsg3PNHmQPNaEReuzRjdE-7bOU'; // Replace with your YouTube API key
+  const CHANNEL_ID = "UChj1JI07oSrkHkMHShKQZwQ"; // Replace with your YouTube channel ID
+  const API_KEY = "AIzaSyChWcDiJKsg3PNHmQPNaEReuzRjdE-7bOU"; // Replace with your YouTube API key
 
   useEffect(() => {
     fetch(
@@ -23,7 +23,7 @@ const YouTubeLastPostedVideo = () => {
         }
       })
       .catch((error) => {
-        console.error('Error fetching videos:', error);
+        console.error("Error fetching videos:", error);
       });
   }, []);
 
@@ -34,7 +34,7 @@ const YouTubeLastPostedVideo = () => {
         const rect = element.getBoundingClientRect();
         const windowHeight =
           window.innerHeight || document.documentElement.clientHeight;
-  
+
         if (rect.top <= windowHeight) {
           setShowVideo(true);
         } else {
@@ -42,38 +42,35 @@ const YouTubeLastPostedVideo = () => {
         }
       }
     };
-  
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
 
   if (!videoInfo) {
-    return <p className='text-white'>Loading...</p>;
+    return <p className="text-white">Loading...</p>;
   }
 
   return (
     <div
       ref={videoRef}
       className={`${
-        showVideo
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-10'
-      } transition-all duration-1000  justify-center items-center h-screen my-56  hidden md:flex`}
+        showVideo ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      } transition-all duration-1000  justify-center items-center h-screen my-56  hidden sm:flex`}
     >
-      <div className=''>
-        <div className='max-w-[1200px]'>
-          <h1 className='text-6xl font-bold mb-4 text-white text-center'>
+      <div className="">
+        <div className="max-w-[1200px]">
+          <h1 className="text-6xl font-bold mb-4 text-white text-center">
             {videoInfo.title}
           </h1>
           <iframe
-            className='w-[1000px] h-[500px] mt-14'
+            className="w-[1000px] h-[500px] items-center ml-24 mt-14"
             src={`https://www.youtube.com/embed/${videoInfo.videoId}`}
-            frameBorder='0'
+            frameBorder="0"
             allowFullScreen
-            title='YouTube Video'
+            title="YouTube Video"
           ></iframe>
         </div>
       </div>

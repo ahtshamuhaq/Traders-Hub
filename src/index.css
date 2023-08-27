@@ -2,10 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
- background-image: url("../src/assets/bg4.jpg");
- background-size: cover;
- 
-  background-color:#002e63;
-  /* background-color:black; */
+body {
+  /* background-image: url("../src/assets/Coin.jpg"); */
+  /* background-image: url("../src/assets/bg4.jpg");
+      background-image: url("../src/assets/bg4.jpg"); */
+  /* background-image: url("../src/assets/bg4.jpg");  */
+  background-size: cover;
+
+  /* background-color: #001c1e; */
+  background-color: #121a1a;
+  background-color: #002027;
+
+  /* background-image: linear-gradient(to bottom, #333300 0%, #003366 100%); */
 }

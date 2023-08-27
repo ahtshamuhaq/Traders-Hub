@@ -1,69 +1,78 @@
-import React, { useState, useEffect } from 'react';
-import Single from '../assets/single.png';
-import Double from '../assets/double.png';
-import Triple from '../assets/triple.png';
+import React from "react";
+import Single from "../assets/single.png";
+import Double from "../assets/double.png";
+import Triple from "../assets/triple.png";
 
 const Cards = () => {
-  const [isInView, setIsInView] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { rootMargin: '-50% 0px', threshold: 0 }
-    );
-
-    const cardsElement = document.getElementById('cards');
-    if (cardsElement) {
-      observer.observe(cardsElement);
-    }
-
-    return () => {
-      if (cardsElement) {
-        observer.unobserve(cardsElement);
-      }
-    };
-  }, []);
-
   return (
-    <div className="w-full py-[13rem] px-4 bg-transparent " id="cards">
-      <div className="max-w-[1000px] mx-auto grid md:grid-cols-2 gap-12">
-        <div
-          className={`bg-white w-full shadow-xl flex flex-col p-4 my-4  hover:bg-purple-800 hover:text-white hover:scale-105 duration-300 rounded-lg transition-transform ${
-            isInView ? 'translate-x-0' : '-translate-x-full'
-          } duration-1000`}
-        >
-          <img className="w-20 mx-auto mt-[-3rem] bg-white" src={Triple} alt="/" />
-          <h2 className="text-2xl font-bold text-center py-8">Premium Discord</h2>
-          <p className="text-center text-4xl font-bold">$20</p>
-          <div className="text-center font-bold">
-            <p className="py-2 border-b mx-8 mt-8">Trade setups</p>
-            <p className="py-2 border-b mx-8">Market Updates</p>
-            <p className="py-2 border-b mx-8">Learning material</p>
-            <p className="py-2 border-b mx-8">Like minded Community</p>
+    <div id="cards" className="w-full sm:w-auto mt-10 mb-10 py-[10rem] px-4">
+      <div className="mb-[10rem]">
+        {" "}
+        <h2 className="text-4xl font-bold text-center text-white">
+          Premium Discord
+        </h2>
+      </div>
+      <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
+        <div className=" bg-black  w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
+          <img
+            className="w-20 mx-auto mt-[-3rem] bg-white"
+            src={Single}
+            alt="/"
+          />
+          <h2 className="text-2xl  font-bold text-center text-white py-8">
+            3 Months Subscription
+          </h2>
+          <p className="text-center text-4xl font-bold text-[#00DDC3]">$75</p>
+          <div className="text-center font-medium">
+            <p className="py-2 border-b mx-8 mt-8 text-white">
+              Interactive Team
+            </p>
+            <p className="py-2 border-b mx-8 text-white">Live Updates</p>
+            <p className="py-2 border-b mx-8 text-white">Weekly QnA Sessions</p>
           </div>
-          <button className= " hover:bg-white hover:text-black bg-purple-500 w-[200px] text-white  rounded-md font-bold my-6 mx-auto px-6 py-3">
-            Get Started
+          <button className="bg-[#00DDC3] w-[200px] hover:bg-white hover:text-black text-white rounded-md font-medium my-6 mx-auto px-6 py-3">
+            Join Now
           </button>
         </div>
-
-        <div
-          className={`bg-white hover:bg-purple-800 hover:text-white   w-full shadow-xl flex flex-col p-4 my-4 hover:scale-105 duration-300 rounded-lg transition-transform ${
-            isInView ? 'translate-x-0' : 'translate-x-full'
-          } duration-1000`}
-        >
-          <img className="w-20 mx-auto mt-[-3rem] bg-white" src={Triple} alt="/" />
-          <h2 className="text-2xl font-bold text-center py-8">Live Batches</h2>
-          <p className="text-center text-4xl font-bold">$50</p>
-          <div className="text-center font-bold">
-            <p className="py-2 border-b mx-8 mt-8">Technical analysis</p>
-            <p className="py-2 border-b mx-8">Fundamental analysis</p>
-            <p className="py-2 border-b mx-8">Fibonacci, Harmonics and smc</p>
-            <p className="py-2 border-b mx-8">Everything from basic to advance</p>
+        <div className="  w-full shadow-xl bg-black text-white flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300">
+          <img
+            className="w-20 mx-auto mt-[-3rem] bg-white"
+            src={Double}
+            alt="/"
+          />
+          <h2 className="text-2xl font-bold text-center py-8">
+            Yearly Subscription
+          </h2>
+          <p className="text-center text-4xl font-bold text-[#00DDC3]">$250</p>
+          <div className="text-center font-medium">
+            <p className="py-2 border-b mx-8 mt-8"> Interactive Team</p>
+            <p className="py-2 border-b mx-8">Live Updates</p>
+            <p className="py-2 border-b mx-8">Weekly QnA Sessions</p>
+            <p className="py-2 border-b mx-8">
+              Access to Yearly Premium Channel
+            </p>
           </div>
-          <button className="bg-purple-500 w-[200px] hover:text-black hover:bg-white text-white rounded-md font-bold my-6 mx-auto px-6 py-3">
-            Get Started
+          <button className="bg-[#00DDC3] hover:bg-white hover:text-black text-white  w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+            Join Now
+          </button>
+        </div>
+        <div className=" bg-black   text-white  w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
+          <img
+            className="w-20 mx-auto mt-[-3rem] bg-white"
+            src={Triple}
+            alt="/"
+          />
+          <h2 className="text-2xl font-bold text-center py-8">
+            6 Months Subscription
+          </h2>
+          <p className="text-center text-4xl font-bold text-[#00DDC3]">$150</p>
+          <div className="text-center font-medium">
+            <p className="py-2 border-b mx-8 mt-8">Interactive Team</p>
+            <p className="py-2 border-b mx-8">Live Updates</p>
+            <p className="py-2 border-b mx-8">Weekly QnA Sessions</p>
+          </div>
+          <button className=" bg-[#00DDC3] w-[200px] hover:text-black hover:bg-white text-white rounded-md font-medium my-6 mx-auto px-6 py-3">
+            Join Now
           </button>
         </div>
       </div>
