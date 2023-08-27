@@ -12,10 +12,10 @@ function Footer2() {
         <div className="bg-neutral-300 p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
           <p className="font-mono text-[10px] sm:text-[0.89rem] ">
             {" "}
-            DISCLAIMER: Trading Bitcoin & Crypto is VERY risky, and 80% of
-            traders don't make money. Make sure that you understand these risks
-            if you are a beginner , Before you start any trade you must research
-            well and take risk managment.
+            DISCLAIMER: Trading Bitcoin & Other Crypto Currencies Is Very Risky,
+            And 95% Of Traders Quits The Market Because They Don't Learn, So You
+            Should Understand The Risk Involved In Financial Markets , Before
+            You Start Trading Must Learn The Market Psychology & Risk Management
           </p>
           <p> mehruin99@gmail.com</p>© 2023 Copyright:
         </div>
