@@ -5,15 +5,15 @@ import Triple from "../assets/triple.png";
 
 const Cards = () => {
   return (
-    <div id="cards" className="w-full sm:w-auto mt-10 mb-10 py-[10rem] px-4">
-      <div className="mb-[10rem]">
+    <div id="cards" className="w-full sm:w-auto mb-10 px-4">
+      <div className="mb-20">
         {" "}
         <h2 className="text-4xl font-bold text-center text-white">
           Premium Discord
         </h2>
       </div>
-      <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8">
-        <div className=" bg-black  w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
+      <div className=" flex flex-wrap w-full justify-between ">
+        <div className=" bg-black w-full md:w-2/5  xl:w-1/4 shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
           <img
             className="w-20 mx-auto mt-[-3rem] bg-white"
             src={Single}
@@ -34,7 +34,7 @@ const Cards = () => {
             Join Now
           </button>
         </div>
-        <div className="  w-full shadow-xl bg-black text-white flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300">
+        <div className="  xl:w-1/4 w-full md:w-2/5 shadow-xl bg-black text-white flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300">
           <img
             className="w-20 mx-auto mt-[-3rem] bg-white"
             src={Double}
@@ -56,7 +56,7 @@ const Cards = () => {
             Join Now
           </button>
         </div>
-        <div className=" bg-black   text-white  w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
+        <div className=" bg-black w-full md:w-2/5 xl:w-1/4  text-white   shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
           <img
             className="w-20 mx-auto mt-[-3rem] bg-white"
             src={Triple}

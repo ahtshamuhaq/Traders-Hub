@@ -4,7 +4,7 @@ import Double from "../assets/double.png";
 export default function Mentorship() {
   return (
     <div className="flex justify-center items-center ">
-      <div className="shadow-xl bg-black text-white flex flex-col px-24 py-10 mb-16 md:my-0 my-8 rounded-lg hover:scale-105 duration-300">
+      <div className="shadow-xl w-full md:w-1/2 bg-black text-white flex flex-col px-24 py-10 mb-16 md:my-0 my-8 rounded-lg hover:scale-105 duration-300">
         <img
           className="w-20 mx-auto mt-[-3rem] bg-white"
           src={Double}

@@ -58,7 +58,7 @@ const YouTubeLastPostedVideo = () => {
       ref={videoRef}
       className={`${
         showVideo ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      } transition-all duration-1000  justify-center items-center h-screen my-56  hidden sm:flex`}
+      } transition-all duration-1000  justify-center items-center  my-56  hidden sm:flex`}
     >
       <div className="">
         <div className="max-w-[1200px]">
@@ -66,7 +66,7 @@ const YouTubeLastPostedVideo = () => {
             {videoInfo.title}
           </h1>
           <iframe
-            className="w-[1000px] h-[500px] items-center ml-24 mt-14"
+            className="w-full h-[500px] items-center mt-14"
             src={`https://www.youtube.com/embed/${videoInfo.videoId}`}
             frameBorder="0"
             allowFullScreen

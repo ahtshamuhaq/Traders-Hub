@@ -4,10 +4,7 @@ import Typed from "react-typed";
 const Hero = () => {
   return (
     <div className="text-white ">
-      <div className=" mt-[-120px] w-auto sm:max-w-[800px] sm:mt-[-96px]  h-screen mx-auto text-center flex flex-col justify-center">
-        {/* <p className='text-[#00df9a] font-bold p-3 mt-3 text-xl'>
-         Road to become an independent trader
-        </p> */}
+      <div className="  w-auto sm:max-w-[800px]  mt-44 mb-40 mx-auto text-center flex flex-col justify-center">
         <h1 className="md:text-4xl sm:text-3xl text-2xl  font-bold md:py-6">
           Road to become an{" "}
           <span className="text-[#00DDC3]">Independent Trader</span>

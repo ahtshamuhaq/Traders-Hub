@@ -36,13 +36,13 @@ const SocialMedia = () => {
       ref={componentRef}
       className={`${
         showComponent
-          ? " -mt-28 ease-in-out duration-1000"
+          ? " ease-in-out duration-1000"
           : "opacity-0 translate-y-10"
       } transition-all px-2 `}
     >
-      <div className="w-full py-[8rem] px-4 bg-transparent " id="SocialMedia">
-        <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-12">
-          <div className="w-full shadow-xl flex flex-col   hover:text-white hover:scale-105  rounded-lg transition-transform duration-1000">
+      <div className="w-full my-[8rem] px-4 bg-transparent " id="SocialMedia">
+        <div className=" sm:w-4/5 sm:mx-auto md:flex-row flex flex-col ">
+          <div className="w-full p-3 shadow-xl flex flex-col   hover:text-white hover:scale-105  rounded-lg transition-transform duration-1000">
             <p className="text-2xl sm:text-5xl font-bold text-white  ">
               {" "}
               Social Media
@@ -54,7 +54,7 @@ const SocialMedia = () => {
             </p>
           </div>
 
-          <div className="bg-none my-10 w-full  flex flex-row   hover:scale-105  rounded-lg transition-transform duration-1000">
+          <div className="bg-none my-10 w-full  flex flex-row md:flex-wrap xl:flex-nowrap  hover:scale-105  rounded-lg transition-transform duration-1000">
             <a href="https://www.youtube.com/channel/UChj1JI07oSrkHkMHShKQZwQ/videos?view=0">
               <img
                 className="w-10 h-10 sm:w-16 sm:h-16 mx-4 sm:hover:scale-110 sm:hover:cursor-pointer"
@@ -78,28 +78,28 @@ const SocialMedia = () => {
             </a>
             <a href="">
               <img
-                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 sm:hover:scale-110 sm:hover:cursor-pointer"
+                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 md:mt-4 mt-0 xl:mt-0 sm:hover:scale-110 sm:hover:cursor-pointer"
                 src={Twitter}
                 alt="TWiter"
               />
             </a>
             <a href="https://www.linkedin.com/in/mehran-khan-23584b22b/?originalSubdomain=pk">
               <img
-                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 sm:hover:scale-110 sm:hover:cursor-pointer"
+                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 md:mt-4 mt-0 xl:mt-0 sm:hover:scale-110 sm:hover:cursor-pointer"
                 src={linkedin}
                 alt="in"
               />
             </a>
             <a href="">
               <img
-                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 sm:hover:scale-110 sm:hover:cursor-pointer"
+                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 md:mt-4 mt-0 xl:mt-0 sm:hover:scale-110 sm:hover:cursor-pointer"
                 src={instagram}
                 alt="ig"
               />
             </a>
             <a href="">
               <img
-                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 sm:hover:scale-110 sm:hover:cursor-pointer"
+                className="w-10 h-10 sm:w-16 sm:h-16 mx-4 md:mt-4 mt-0 xl:mt-0 sm:hover:scale-110 sm:hover:cursor-pointer"
                 src={tiktok}
                 alt="ig"
               />
